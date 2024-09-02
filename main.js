@@ -21,6 +21,10 @@ async function petsArea()
         clone.querySelector("h3").textContent = events.name
         clone.querySelector(".event-description").textContent = events.description
         clone.querySelector(".event-date").textContent = events.date
+        if (!events.photo)
+        {
+            events.photo = "images/fallback.jpg"
+        }
         clone.querySelector(".event-card-photo img").src = events.photo
         clone.querySelector(".event-card-photo img").alt = `A photo of the ${events.name}`
         wrapper.appendChild(clone)
