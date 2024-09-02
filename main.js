@@ -1,3 +1,5 @@
+const template = document.querySelector("#event-card-template")
+const wrapper = document.createDocumentFragment()
 
 async function start()
 {
@@ -13,11 +15,14 @@ async function petsArea()
 {
     const eventsPromise = await fetch("https://richardguo24.github.io/ClubEventData/clubevents.json");
     const eventsData = await eventsPromise.json();
-    eventsData.forEach(function (pet)
+    eventsData.forEach(function (events)
     {
-        console.log(pet.name);
+        const clone = template.content.cloneNode(true)
+        clone.querySelector("h3").textContent = events.name
+        wrapper.appendChild(clone)
     })
-    console.log(eventsData)
+
+    document.querySelector(".list-of-events").appendChild(wrapper)
 }
 
 petsArea()
