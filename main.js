@@ -34,3 +34,23 @@ async function petsArea()
 }
 
 petsArea()
+
+const allButtons = document.querySelectorAll(".event-filter button")
+
+//Pet Filter Button Code
+allButtons.forEach(function (el)
+{
+    el.addEventListener("click", handleButtonClick)
+})
+
+function handleButtonClick(e)
+{
+    //remove active class
+    allButtons.forEach(function (el)
+    {
+        el.classList.remove("active")
+    })
+    //add active class to specific button that just got clicked
+    e.target.classList.add("active")
+    //actually filter the events below
+}
