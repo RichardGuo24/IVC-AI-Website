@@ -107,58 +107,23 @@
         <div class="page-section-inner">
             <h2 class="page-section-title">Club Schedule</h2>
             <div class="event-filter">
-                <p>Show me: <button>All Events</button> <button>Only Activities</button> <button>Only
+                <p>Show me: <button class="active" data-filter="all">All Events</button> <button
+                        data-filter="activity">Only Activities</button> <button data-filter="talk">Only
                         Talks</button></p>
             </div>
-            <div class="list-of-events">
+            <div class="list-of-events"></div>
+            <template id="event-card-template">
                 <div class="event-card">
                     <div class="event-card-text">
-                        <h3>First Club Meeting</h3>
-                        <p class="event-description">Get to know more about what the AI club is about! Learn more about
-                            the board and future events.</p>
-                        <p class="event-date">9/15</p>
+                        <h3></h3>
+                        <p class="event-description"></p>
+                        <p class="event-date"></p>
                     </div>
                     <div class="event-card-photo">
-                        <img src="images/bestivcphoto.jpg" alt="A picture of IVC">
+                        <img src="" alt="">
                     </div>
-                </div> <!-- end of pet card-->
-                <div class="event-card">
-                    <div class="event-card-text">
-                        <h3>Guest Speaker Muhammad</h3>
-                        <p class="event-description">Take a seat and listen to Muhammad share his experiences at Google!
-                        </p>
-                        <p class="event-date">10/23</p>
-                    </div>
-                    <div class="event-card-photo">
-                        <img src="images/betterguestspeaker.jpg" alt="A picture of IVC">
-                    </div>
-                </div> <!-- end of pet card-->
-                <div class="event-card">
-                    <div class="event-card-text">
-                        <h3>Wordle AI Workshop</h3>
-                        <p class="event-description">Learn basic python functions to build a simple AI model that
-                            automatically solves
-                            Wordle! Open to all skill levels.</p>
-                        <p class="event-date">11/13</p>
-                    </div>
-                    <div class="event-card-photo">
-                        <img src="images/workshop.jpg" alt="A picture of IVC">
-                    </div>
-                </div> <!-- end of pet card-->
-                <div class="event-card">
-                    <div class="event-card-text">
-                        <h3>Winter Hackathon</h3>
-                        <p class="event-description">Team up with people to take part in IVC Artificial Intelligence
-                            Club's first annual
-                            hackathon.
-                            the test. </p>
-                        <p class="event-date">12/11</p>
-                    </div>
-                    <div class="event-card-photo">
-                        <img src="images/hackathonphoto.jpg" alt="A picture of IVC">
-                    </div>
-                </div> <!-- end of pet card-->
-            </div>
+                </div>
+            </template>
         </div>
     </div>
 
