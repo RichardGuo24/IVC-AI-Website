@@ -19,6 +19,10 @@ async function petsArea()
     {
         const clone = template.content.cloneNode(true)
         clone.querySelector("h3").textContent = events.name
+        clone.querySelector(".event-description").textContent = events.description
+        clone.querySelector(".event-date").textContent = events.date
+        clone.querySelector(".event-card-photo img").src = events.photo
+        clone.querySelector(".event-card-photo img").alt = `A photo of the ${events.name}`
         wrapper.appendChild(clone)
     })
 
