@@ -8,3 +8,16 @@ async function start()
 }
 
 start();
+
+async function petsArea()
+{
+    const eventsPromise = await fetch("https://richardguo24.github.io/ClubEventData/clubevents.json");
+    const eventsData = await eventsPromise.json();
+    eventsData.forEach(function (pet)
+    {
+        console.log(pet.name);
+    })
+    console.log(eventsData)
+}
+
+petsArea()
