@@ -18,6 +18,8 @@ async function petsArea()
     eventsData.forEach(function (events)
     {
         const clone = template.content.cloneNode(true)
+
+        clone.querySelector(".event-card").dataset.type = events.type
         clone.querySelector("h3").textContent = events.name
         clone.querySelector(".event-description").textContent = events.description
         clone.querySelector(".event-date").textContent = events.date
@@ -53,4 +55,16 @@ function handleButtonClick(e)
     //add active class to specific button that just got clicked
     e.target.classList.add("active")
     //actually filter the events below
+    const currentFilter = e.target.dataset.filter
+    document.querySelectorAll(".event-card").forEach(function (el)
+    {
+        if (currentFilter == el.dataset.type || currentFilter == "all")
+        {
+            el.style.display = "grid"
+        } else
+        {
+            el.style.display = "none"
+        }
+    })
+
 }
